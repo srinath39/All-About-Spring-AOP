@@ -13,4 +13,7 @@ public class CommonPointCutConfig {
 
     @Pointcut("execution(* com.MyProject.Learn_Spring_AOP.MyApplication.Data.*.*(..))")
     public void dataServicePointCutConfig(){}
+
+    @Pointcut("bean(*Service*)")   // all the classes with "service" content included will be considered
+    public void allPackageConfigBean(){}
 }
