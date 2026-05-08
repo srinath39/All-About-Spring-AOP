@@ -15,7 +15,7 @@ public class TimeTrackingAspect {
     private Logger logger= LoggerFactory.getLogger(getClass());
 
 
-    @Around("execution(* com.MyProject.Learn_Spring_AOP.MyApplication.Business.*.*(..))")
+    @Around("com.MyProject.Learn_Spring_AOP.CommonPointCutConfig.dataServicePointCutConfig()")
     public Object getExecutionTimeOfMethod(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
         long startTimeMilliSeconds=System.currentTimeMillis();
         // method execution
