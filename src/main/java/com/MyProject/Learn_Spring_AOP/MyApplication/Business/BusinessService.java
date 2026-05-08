@@ -1,5 +1,6 @@
 package com.MyProject.Learn_Spring_AOP.MyApplication.Business;
 
+import com.MyProject.Learn_Spring_AOP.Annotations.TrackTime;
 import com.MyProject.Learn_Spring_AOP.MyApplication.Data.DataService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,7 @@ public class BusinessService {
         this.dataService=dataService;
     }
 
+    @TrackTime
     public int getMaxValue(){
         int[] data=dataService.retrieveData();
 //        if(true) {

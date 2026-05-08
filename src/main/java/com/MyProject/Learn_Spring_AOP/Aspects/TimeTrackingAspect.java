@@ -15,7 +15,8 @@ public class TimeTrackingAspect {
     private Logger logger= LoggerFactory.getLogger(getClass());
 
 
-    @Around("com.MyProject.Learn_Spring_AOP.CommonPointCutConfig.allPackageConfigBean()")
+//    @Around("com.MyProject.Learn_Spring_AOP.CommonPointCutConfig.allPackageConfigBean()")
+    @Around("com.MyProject.Learn_Spring_AOP.CommonPointCutConfig.tracktimeAnnotationConfig()")
     public Object getExecutionTimeOfMethod(ProceedingJoinPoint proceedingJoinPoint) throws Throwable{
         long startTimeMilliSeconds=System.currentTimeMillis();
         // method execution

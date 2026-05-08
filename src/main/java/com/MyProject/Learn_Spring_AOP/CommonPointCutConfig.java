@@ -16,4 +16,7 @@ public class CommonPointCutConfig {
 
     @Pointcut("bean(*Service*)")   // all the classes with "service" content included will be considered
     public void allPackageConfigBean(){}
+
+    @Pointcut("@annotation(com.MyProject.Learn_Spring_AOP.Annotations.TrackTime)")
+    public void tracktimeAnnotationConfig(){}
 }
